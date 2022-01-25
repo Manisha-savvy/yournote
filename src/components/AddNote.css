@@ -1,0 +1,24 @@
+
+.container{
+    background-color: grey;
+    color: black;
+    margin-top: 50px;
+},
+
+.card-body{
+ color: crimson ;
+}
+
+.text{
+color: black;
+/* text-shadow: 2px 2px #ff0000; */
+}
+
+.text-box{
+border: 1px solid black;
+
+}
+
+.display-notes{
+    background-color: lightblue;
+padding: 50px;}
