@@ -1,8 +1,9 @@
 import React, {useState} from 'react'
 import { useNavigate } from 'react-router-dom'
+import './Signup.css';
 
 const Signup = () => {
-    const [credentials, setCredentials] = useState({name:"",email: "", password: "",cpassword :""}) 
+    const [credentials, setCredentials] = useState({name:"", email: "", password:"", cpassword:""}) 
     let history = useNavigate();
     
 
@@ -25,10 +26,7 @@ const Signup = () => {
                 localStorage.setItem('token', json.authtoken); 
                 history.push("/");
     
-            }
-            else{
-                alert("Invalid credentials");
-            }
+            } 
         
     }
 
@@ -37,29 +35,32 @@ const Signup = () => {
     }
 
     return (
-        <div className="container">
-            <form onSubmit = {handleSubmit}>
+        <div className="container Container-signup">
+            <form className='form' onSubmit = {handleSubmit}>
+                <div className='Signup'>
+                <h1><u>Sign Up</u></h1>
+                </div>
                 <div className="mb-3">
-                    <label htmlFor="name" className="form-label">Name</label>
-                    <input type="text" className="form-control" id="name" name ="name" onChange={onChange}aria-describedby="emailHelp"/>
+                    <label htmlFor="name" className="form-label"><b>Name</b></label>
+                    <input type="text" className="text form-control" id="name" name ="name" onChange={onChange}aria-describedby="emailHelp"/>
                 </div>
 
                 <div className="mb-3">
-                    <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
-                    <input type="email" className="form-control" id="exampleInputEmail1"  name="email"onChange={onChange}aria-describedby="emailHelp"/>
-                        <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
+                    <label htmlFor="exampleInputEmail1" className="form-label"><b>Email address</b></label>
+                    <input type="email" className="text form-control" id="exampleInputEmail1"  name="email"onChange={onChange}aria-describedby="emailHelp"/>
+                        <div id="emailHelp" className="form-text"><b>We'll never share your email with anyone else.</b></div>
                 </div>
 
                 <div className="mb-3">
-                    <label htmlFor="password" className="form-label">Password</label>
-                    <input type="password" className="form-control" id="password" name = "password"onChange={onChange}/>
+                    <label htmlFor="password" className="form-label"><b>Password</b></label>
+                    <input type="password" className="text form-control" id="password" name = "password"onChange={onChange} minLength={5}/>
                 </div>
                 <div className="mb-3">
-                    <label htmlFor="password" className="form-label">Confirm Password</label>
-                    <input type="password" className="form-control" id="cpassword" name = "cpassword" onChange={onChange}/>
+                    <label htmlFor="password" className="form-label"><b>Confirm Password</b></label>
+                    <input type="password" className="text form-control" id="cpassword" name = "cpassword" onChange={onChange} minLength={5}/>
                 </div>
 
-                <button type="submit" className="btn btn-primary">Submit</button>
+                <button type="submit" className="button btn btn-success"><b>Submit</b></button>
             </form>
         </div>
     )

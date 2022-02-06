@@ -1,0 +1,37 @@
+.login{
+    /* background-color: lightblue; */
+    display :flex;
+    flex-direction: column;
+    background-color: wheat;
+    border-radius: 10px;
+    padding: 0px;
+    margin-top: 100px;
+    margin-left: 300px;
+    height: 55vh;
+    width:50%;
+    font-family: cursive;
+    flex-grow: 0;
+    font-family: cursive;
+    border-radius: 30px;
+    border-color: 10px solid black;
+    
+
+}
+
+.loginform{
+    display:flex;
+    flex-direction: column;
+    /* margin:0 20px; */
+    background-color: solid white ;
+    /* flex-basis: 0; */
+    padding: 30px;
+
+    /* justify-content: space-evenly; */
+}
+.submit{
+    align-self: center;
+    background-color: rgb(94, 145, 43);
+    /* align-items: center; */
+    margin-top: 20px;
+}
+

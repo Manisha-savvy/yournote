@@ -1,3 +1,8 @@
+body{
+  background-color: rgb(241, 137, 119);
+  background-image: url("./components/download\ \(2\).jfif");
+  z-index: -1000;
+}
 .App {
   text-align: center;
 }
@@ -36,3 +41,5 @@
     transform: rotate(360deg);
   }
 }
+
+

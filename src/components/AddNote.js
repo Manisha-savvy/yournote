@@ -1,8 +1,8 @@
 import React, {useContext, useState} from 'react';
 import noteContext from "../context/notes/noteContext";
 import './AddNote.css';
-import { faUserTie } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faUserTie } from '@fortawesome/free-solid-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
 const AddNote = () => {
@@ -21,9 +21,10 @@ const AddNote = () => {
         setNote({...note, [e.target.name]: e.target.value})
     }
     return (
-        <div className="container my-3">
-            <span><FontAwesomeIcon icon={faUserTie} /> Add a Note</span>
+        <div className="container my-3 container-AddNote">
+            {/* <span><FontAwesomeIcon icon={faUserTie} /> Add a Note</span> */}
             {/* <h2><FontAwesomeIcon icon={faUserTie} />Add a Note</h2> */}
+            <h2 className='add'><u>Add a Note</u></h2>
             <form className="my-3">
                 <div className="mb-3">
                     <label htmlFor="title" className="text form-label"><b>Title</b></label>
@@ -39,7 +40,7 @@ const AddNote = () => {
                     <input type="text" className="text-box form-control" id="tag" name="tag" value={note.tag} onChange={onChange} minLength={5} required />
                 </div>
                
-                <button disabled={note.title.length<5 || note.description.length<5} type="submit" className="btn btn-primary" onClick={handleClick}>Add Note</button>
+                <button disabled={note.title.length<5 || note.description.length<5} type="submit" className="button btn btn-primary" onClick={handleClick}>Add Note</button>
             </form>
         </div>
     )
